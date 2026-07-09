@@ -1,19 +1,52 @@
 import { NextResponse } from "next/server";
-import connectDB from "@/lib/mongodb";
-import PricingItem from "@/lib/models/PricingItem";
 
 export const dynamic = "force-dynamic";
 
+const pricing = [
+  {
+    title: "Initial Consultation",
+    description: "A detailed first conversation to understand your concern and wellness goals.",
+    price: "Contact on WhatsApp",
+    duration: "60–90 minutes",
+    order: 1,
+  },
+  {
+    title: "Follow-Up Consultation",
+    description: "Continued support and guidance after your first consultation.",
+    price: "Contact on WhatsApp",
+    duration: "30–45 minutes",
+    order: 2,
+  },
+  {
+    title: "Children's Consultation",
+    description: "Gentle consultation support for children's health and wellness concerns.",
+    price: "Contact on WhatsApp",
+    duration: "45–60 minutes",
+    order: 3,
+  },
+  {
+    title: "Women's Wellness Consultation",
+    description: "Personalized support for women's wellness concerns across all stages of life.",
+    price: "Contact on WhatsApp",
+    duration: "60 minutes",
+    order: 4,
+  },
+  {
+    title: "Family Wellness Consultation",
+    description: "Comprehensive wellness guidance for families.",
+    price: "Contact on WhatsApp",
+    duration: "60–75 minutes",
+    order: 5,
+  },
+  {
+    title: "Product / Remedy Guidance",
+    description: "Ask about available homeopathic products for your wellness needs.",
+    price: "Contact on WhatsApp",
+    duration: "15–30 minutes",
+    order: 6,
+  },
+];
+
 export async function GET() {
-  try {
-    await connectDB();
-    const pricing = await PricingItem.find({}).sort({ order: 1 }).lean();
-    return NextResponse.json({ success: true, pricing }, { status: 200 });
-  } catch (error) {
-    console.error("Pricing API error:", error);
-    return NextResponse.json(
-      { error: "Failed to fetch pricing." },
-      { status: 500 }
-    );
-  }
+  return NextResponse.json({ success: true, pricing }, { status: 200 });
 }

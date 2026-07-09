@@ -68,19 +68,9 @@ export default function BookingForm() {
     setStatus("loading");
     setErrorMessage("");
 
-    try {
-      const res = await fetch("/api/booking", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "Something went wrong.");
-      setStatus("success");
-    } catch (err: unknown) {
-      setErrorMessage(err instanceof Error ? err.message : "Something went wrong. Please try WhatsApp directly.");
-      setStatus("error");
-    }
+    // No database — submit opens WhatsApp directly
+    setStatus("success");
+    window.open(`https://wa.me/16477819461?text=${buildWhatsAppMessage()}`, "_blank");
   };
 
   const inputClass = "w-full px-4 py-3 rounded-2xl text-sm outline-none transition-all focus:ring-2 focus:ring-pink-soft/40 border";

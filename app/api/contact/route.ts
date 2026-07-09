@@ -1,6 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import connectDB from "@/lib/mongodb";
-import ContactInquiry from "@/lib/models/ContactInquiry";
 import { sendContactEmail } from "@/lib/mailer";
 
 export const dynamic = "force-dynamic";
@@ -23,15 +21,6 @@ export async function POST(req: NextRequest) {
         { status: 400 }
       );
     }
-
-    await connectDB();
-
-    await ContactInquiry.create({
-      name: name.trim(),
-      phone: phone.trim(),
-      email: email?.trim() || undefined,
-      message: message.trim(),
-    });
 
     try {
       await sendContactEmail({

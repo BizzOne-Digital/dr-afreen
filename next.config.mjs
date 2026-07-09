@@ -7,7 +7,7 @@ const nextConfig = {
     remotePatterns: [],
   },
   experimental: {
-    serverComponentsExternalPackages: ["mongoose", "nodemailer"],
+    serverComponentsExternalPackages: ["nodemailer"],
   },
 };
 
