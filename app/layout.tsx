@@ -18,6 +18,8 @@ const nunito = Nunito_Sans({
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-nunito",
   display: "swap",
+  adjustFontFallback: false,
+  fallback: ["system-ui", "arial"],
 });
 
 export const viewport: Viewport = {
