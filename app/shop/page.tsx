@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ShoppingBag } from "lucide-react";
-import SectionHeading from "@/components/ui/SectionHeading";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import ProductCard from "@/components/shop/ProductCard";
 import ProductQuickViewModal from "@/components/shop/ProductQuickViewModal";
