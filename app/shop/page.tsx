@@ -123,7 +123,7 @@ export default function ShopPage() {
     <main>
       {/* Hero */}
       <section
-        className="relative min-h-[55vh] flex items-center pt-28 pb-20 overflow-hidden"
+        className="relative min-h-[65vh] flex items-center pt-28 pb-24 sm:pb-28 overflow-hidden"
         style={{ background: "linear-gradient(135deg, #FFFCF8 0%, #FFE8F0 50%, #FFF8EF 100%)" }}
       >
         <MoonGlow size={500} color="rgba(246,200,95,0.15)" className="top-1/2 left-1/2" />
