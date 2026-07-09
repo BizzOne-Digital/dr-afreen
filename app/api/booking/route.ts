@@ -3,6 +3,8 @@ import connectDB from "@/lib/mongodb";
 import BookingInquiry from "@/lib/models/BookingInquiry";
 import { sendBookingEmail } from "@/lib/mailer";
 
+export const dynamic = "force-dynamic";
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
