@@ -14,9 +14,9 @@
   --cream-light: #FFFCF8;
   --text-dark: #2B1821;
   --font-heading: "Cormorant Garamond", Georgia, serif;
-  --font-body: "Nunito Sans", sans-serif;
+  --font-body: "Nunito", "Nunito Sans", sans-serif;
   --font-cormorant: "Cormorant Garamond";
-  --font-nunito: "Nunito Sans";
+  --font-nunito: "Nunito";
 }
 
 * {

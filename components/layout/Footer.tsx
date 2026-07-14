@@ -220,7 +220,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="mailto:moonhomeopathic@gmail.com"
+                    href="mailto:Afreensd123@gmail.com"
                     className="flex items-center gap-3 text-sm group"
                     style={{ color: "rgba(255,252,248,0.8)", fontFamily: "Nunito Sans, sans-serif" }}
                   >
@@ -231,7 +231,7 @@ export default function Footer() {
                       <Mail className="w-3.5 h-3.5" style={{ color: "#F7A8C4" }} />
                     </span>
                     <span className="group-hover:text-pink-soft transition-colors break-all">
-                      moonhomeopathic@gmail.com
+                      Afreensd123@gmail.com
                     </span>
                   </a>
                 </li>

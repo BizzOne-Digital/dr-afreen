@@ -149,7 +149,7 @@ export default function BookingPage() {
                           </div>
                           <div>
                             <p className="text-xs" style={{ color: "#9B6878", fontFamily: "Nunito Sans, sans-serif" }}>Email</p>
-                            <p className="text-sm font-medium break-all" style={{ color: "#2B1821", fontFamily: "Nunito Sans, sans-serif" }}>moonhomeopathic@gmail.com</p>
+                            <p className="text-sm font-medium break-all" style={{ color: "#2B1821", fontFamily: "Nunito Sans, sans-serif" }}>Afreensd123@gmail.com</p>
                           </div>
                         </div>
                         <div className="flex items-center gap-3">

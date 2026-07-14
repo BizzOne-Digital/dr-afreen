@@ -1,5 +1,5 @@
-import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Nunito_Sans } from "next/font/google";
+import type { Metadata } from "next";
+import { Cormorant_Garamond, Nunito } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -13,20 +13,12 @@ const cormorant = Cormorant_Garamond({
   display: "swap",
 });
 
-const nunito = Nunito_Sans({
+const nunito = Nunito({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-nunito",
   display: "swap",
-  adjustFontFallback: false,
-  fallback: ["system-ui", "arial"],
 });
-
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  maximumScale: 5,
-};
 
 export const metadata: Metadata = {
   title: "Moon Homeopathy | Dr. Afreen – Gentle Care for Women & Children in Toronto",
@@ -49,9 +41,7 @@ export const metadata: Metadata = {
     locale: "en_CA",
   },
   icons: {
-    icon: [{ url: "/logo.png", type: "image/png" }],
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    icon: "/logo.png",
   },
 };
 
@@ -63,8 +53,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cormorant.variable} ${nunito.variable}`}>
       <head>
-        <link rel="icon" href="/logo.png" type="image/png" sizes="any" />
-        <link rel="apple-touch-icon" href="/logo.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
