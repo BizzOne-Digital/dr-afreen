@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { MessageCircle, Clock, Phone, Mail } from "lucide-react";
+import { MessageCircle, Clock, Phone, Mail, Facebook } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import PageTransition from "@/components/layout/PageTransition";
@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 };
 
 const WHATSAPP_URL = "https://wa.me/16477819461?text=Hi%20Dr.%20Afreen%2C%20I%27d%20like%20to%20book%20a%20consultation.";
+const FACEBOOK_URL = "https://www.facebook.com/share/p/19GwrJvLat/";
 
 const steps = [
   { number: "01", title: "Fill the Form", description: "Complete the inquiry form below or message directly on WhatsApp." },
@@ -42,16 +43,28 @@ export default function BookingPage() {
               <p className="text-lg leading-relaxed max-w-2xl mx-auto mb-8" style={{ color: "#6B4755", fontFamily: "Nunito Sans, sans-serif" }}>
                 Appointments and questions are handled directly through WhatsApp for a simple and personal experience.
               </p>
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-10 py-4 rounded-full font-semibold text-white"
-                style={{ background: "#25D366", fontFamily: "Nunito Sans, sans-serif", boxShadow: "0 8px 24px rgba(37,211,102,0.3)" }}
-              >
-                <MessageCircle className="w-5 h-5" />
-                Book on WhatsApp
-              </a>
+              <div className="flex flex-wrap items-center justify-center gap-3">
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-10 py-4 rounded-full font-semibold text-white"
+                  style={{ background: "#25D366", fontFamily: "Nunito Sans, sans-serif", boxShadow: "0 8px 24px rgba(37,211,102,0.3)" }}
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  Book on WhatsApp
+                </a>
+                <a
+                  href={FACEBOOK_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-white"
+                  style={{ background: "#1877F2", fontFamily: "Nunito Sans, sans-serif", boxShadow: "0 8px 24px rgba(24,119,242,0.3)" }}
+                >
+                  <Facebook className="w-5 h-5" />
+                  Follow on Facebook
+                </a>
+              </div>
             </ScrollReveal>
           </div>
         </section>
@@ -161,6 +174,20 @@ export default function BookingPage() {
                             <p className="text-sm font-medium" style={{ color: "#2B1821", fontFamily: "Nunito Sans, sans-serif" }}>Within 24 hours</p>
                           </div>
                         </div>
+                        <a
+                          href={FACEBOOK_URL}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-3 group"
+                        >
+                          <div className="w-9 h-9 rounded-xl flex items-center justify-center" style={{ background: "rgba(24,119,242,0.12)" }}>
+                            <Facebook className="w-4 h-4" style={{ color: "#1877F2" }} />
+                          </div>
+                          <div>
+                            <p className="text-xs" style={{ color: "#9B6878", fontFamily: "Nunito Sans, sans-serif" }}>Facebook</p>
+                            <p className="text-sm font-medium group-hover:underline" style={{ color: "#1877F2", fontFamily: "Nunito Sans, sans-serif" }}>Follow Dr. Afreen</p>
+                          </div>
+                        </a>
                       </div>
                     </div>
 
