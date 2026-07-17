@@ -1,10 +1,11 @@
 import { Metadata } from "next";
-import { MessageCircle, Clock, Phone, Mail, Facebook } from "lucide-react";
+import { MessageCircle, Clock, Phone, Mail } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import PageTransition from "@/components/layout/PageTransition";
 import BookingForm from "@/components/booking/BookingForm";
 import MoonGlow from "@/components/ui/MoonGlow";
+import FacebookIcon from "@/components/ui/FacebookIcon";
 
 export const metadata: Metadata = {
   title: "Book a Consultation | Moon Homeopathy Toronto",
@@ -61,7 +62,7 @@ export default function BookingPage() {
                   className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-white"
                   style={{ background: "#1877F2", fontFamily: "Nunito Sans, sans-serif", boxShadow: "0 8px 24px rgba(24,119,242,0.3)" }}
                 >
-                  <Facebook className="w-5 h-5" />
+                  <FacebookIcon className="w-5 h-5" />
                   Follow on Facebook
                 </a>
               </div>
@@ -181,7 +182,7 @@ export default function BookingPage() {
                           className="flex items-center gap-3 group"
                         >
                           <div className="w-9 h-9 rounded-xl flex items-center justify-center" style={{ background: "rgba(24,119,242,0.12)" }}>
-                            <Facebook className="w-4 h-4" style={{ color: "#1877F2" }} />
+                            <FacebookIcon className="w-4 h-4" style={{ color: "#1877F2" }} />
                           </div>
                           <div>
                             <p className="text-xs" style={{ color: "#9B6878", fontFamily: "Nunito Sans, sans-serif" }}>Facebook</p>

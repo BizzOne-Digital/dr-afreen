@@ -12,9 +12,9 @@ import {
   Calendar,
   Shield,
   Leaf,
-  Facebook,
 } from "lucide-react";
 import Logo from "@/components/ui/Logo";
+import FacebookIcon from "@/components/ui/FacebookIcon";
 
 const WHATSAPP_URL = "https://wa.me/16477819461?text=Hi%20Dr.%20Afreen%2C%20I%27d%20like%20to%20book%20a%20consultation.";
 const FACEBOOK_URL = "https://www.facebook.com/share/p/19GwrJvLat/";
@@ -192,7 +192,7 @@ export default function Footer() {
                     boxShadow: "0 0 20px rgba(246, 200, 95, 0.15)",
                   }}
                 >
-                  <Facebook className="w-4 h-4" />
+                  <FacebookIcon className="w-4 h-4" />
                 </a>
               </div>
             </div>
@@ -301,7 +301,7 @@ export default function Footer() {
                       className="w-8 h-8 rounded-full flex items-center justify-center shrink-0"
                       style={{ background: "rgba(75, 16, 37, 0.6)", border: "1px solid rgba(247, 168, 196, 0.25)" }}
                     >
-                      <Facebook className="w-3.5 h-3.5" style={{ color: "#F7A8C4" }} />
+                      <FacebookIcon className="w-3.5 h-3.5" style={{ color: "#F7A8C4" }} />
                     </span>
                     <span className="group-hover:text-pink-soft transition-colors">Follow on Facebook</span>
                   </a>
