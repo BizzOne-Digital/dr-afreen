@@ -9,25 +9,12 @@ const WHATSAPP_URL = "https://wa.me/16477819461?text=Hi%20Dr.%20Afreen%2C%20I%27
 
 export default function FinalCTA() {
   return (
-    <section className="section-padding relative overflow-hidden min-h-[420px] flex items-center">
-      {/* Full-section background image */}
-      <Image
-        src="/moon-glow.png"
-        alt=""
-        fill
-        className="object-cover object-center"
-        sizes="100vw"
-        priority
-        aria-hidden
-      />
-      {/* Soft overlay for readable text */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(135deg, rgba(255,252,248,0.82) 0%, rgba(255,232,240,0.78) 45%, rgba(255,248,239,0.85) 100%)",
-        }}
-      />
+    <section
+      className="section-padding relative overflow-hidden min-h-[420px] flex items-center"
+      style={{ background: "linear-gradient(160deg, #4B1025 0%, #6B1835 40%, #7A1F3D 100%)" }}
+    >
+      <div className="absolute top-10 right-12 text-5xl opacity-15 pointer-events-none select-none" style={{ color: "#F7A8C4" }}>✿</div>
+      <div className="absolute bottom-16 left-10 text-3xl opacity-10 pointer-events-none select-none" style={{ color: "#F6C85F" }}>✦</div>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center w-full">
         <ScrollReveal>
@@ -40,7 +27,7 @@ export default function FinalCTA() {
               className="absolute inset-0 rounded-full -m-3"
               style={{ background: "radial-gradient(circle, rgba(246,200,95,0.35) 0%, transparent 70%)" }}
             />
-            <div className="w-20 h-20 relative rounded-full overflow-hidden ring-2 ring-white/80">
+            <div className="w-20 h-20 relative rounded-full overflow-hidden ring-2 ring-white/30">
               <Image src="/logo.png" alt="Moon Homeopathy" fill className="object-contain" />
             </div>
           </motion.div>
@@ -54,8 +41,8 @@ export default function FinalCTA() {
           </div>
 
           <h2
-            className="text-4xl md:text-5xl font-light leading-tight mb-6"
-            style={{ fontFamily: "Cormorant Garamond, Georgia, serif", color: "#7A1F3D" }}
+            className="text-4xl md:text-5xl font-semibold leading-tight mb-6"
+            style={{ fontFamily: "Cormorant Garamond, Georgia, serif", color: "#FFFCF8" }}
           >
             Have a concern?
             <span className="block italic">Message Dr. Afreen directly.</span>
@@ -63,7 +50,7 @@ export default function FinalCTA() {
 
           <p
             className="text-base leading-relaxed mb-10 max-w-xl mx-auto"
-            style={{ color: "#6B5560", fontFamily: "Nunito Sans, sans-serif" }}
+            style={{ color: "rgba(255,240,245,0.85)", fontFamily: "Nunito Sans, sans-serif" }}
           >
             Reach out on WhatsApp for a warm, personalized conversation about your wellness concerns. Dr. Afreen is here to listen and guide you.
           </p>

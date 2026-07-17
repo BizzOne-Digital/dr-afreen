@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
+const CREDENTIALS =
+  "by Dr. Afreen Saeed D.H.M.S (Registered in Canada and membership with Ontario Homeopathic Medical Association)";
+
 export default function IntroWrapper({ children }: { children: React.ReactNode }) {
   const [showIntro, setShowIntro] = useState(true);
   const [mounted, setMounted] = useState(false);
@@ -12,7 +15,7 @@ export default function IntroWrapper({ children }: { children: React.ReactNode }
     setMounted(true);
     const timer = setTimeout(() => {
       setShowIntro(false);
-    }, 2500);
+    }, 2800);
     return () => clearTimeout(timer);
   }, []);
 
@@ -29,10 +32,8 @@ export default function IntroWrapper({ children }: { children: React.ReactNode }
             className="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden"
             style={{ background: "linear-gradient(135deg, #FFFCF8 0%, #FFE8F0 50%, #FFF8EF 100%)" }}
           >
-            {/* Background particles */}
             <FloatingParticles />
 
-            {/* Moon glow */}
             <motion.div
               initial={{ scale: 0.5, opacity: 0 }}
               animate={{ scale: 1.2, opacity: 1 }}
@@ -47,22 +48,20 @@ export default function IntroWrapper({ children }: { children: React.ReactNode }
               />
             </motion.div>
 
-            {/* Logo and text */}
-            <div className="relative flex flex-col items-center gap-6">
+            <div className="relative flex flex-col items-center gap-5 px-6 max-w-2xl">
               <motion.div
                 initial={{ scale: 0.6, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.9, delay: 0.2, ease: [0.34, 1.56, 0.64, 1] }}
+                transition={{ duration: 0.9, delay: 0.15, ease: [0.34, 1.56, 0.64, 1] }}
                 className="relative"
               >
-                {/* Logo glow ring */}
                 <motion.div
                   animate={{ scale: [1, 1.15, 1], opacity: [0.5, 1, 0.5] }}
                   transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
                   className="absolute inset-0 -m-6 rounded-full"
                   style={{ background: "radial-gradient(circle, rgba(246,200,95,0.4) 0%, transparent 70%)" }}
                 />
-                <div className="w-24 h-24 relative rounded-full overflow-hidden">
+                <div className="w-28 h-28 relative rounded-full overflow-hidden">
                   <Image
                     src="/logo.png"
                     alt="Moon Homeopathy"
@@ -74,25 +73,37 @@ export default function IntroWrapper({ children }: { children: React.ReactNode }
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
+                transition={{ duration: 0.7, delay: 0.45, ease: "easeOut" }}
                 className="text-center"
               >
+                {/* Welcome on top */}
+                <p
+                  className="text-sm sm:text-base font-semibold tracking-[0.35em] uppercase mb-3"
+                  style={{ color: "#4B1025", fontFamily: "Nunito Sans, sans-serif" }}
+                >
+                  Welcome
+                </p>
+
                 <h1
-                  className="text-4xl font-light tracking-widest"
-                  style={{ fontFamily: "Cormorant Garamond, Georgia, serif", color: "#7A1F3D" }}
+                  className="text-5xl sm:text-6xl md:text-7xl font-semibold tracking-wide leading-tight"
+                  style={{
+                    fontFamily: "Cormorant Garamond, Georgia, serif",
+                    color: "#4B1025",
+                  }}
                 >
                   Moon Homeopathy
                 </h1>
+
                 <motion.p
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ duration: 0.6, delay: 1.1 }}
-                  className="text-sm tracking-[0.2em] mt-2"
-                  style={{ color: "#F7A8C4" }}
+                  transition={{ duration: 0.6, delay: 0.9 }}
+                  className="text-sm sm:text-base mt-4 leading-relaxed max-w-lg mx-auto font-medium"
+                  style={{ color: "#7A1F3D", fontFamily: "Nunito Sans, sans-serif" }}
                 >
-                  by Dr. Afreen
+                  {CREDENTIALS}
                 </motion.p>
               </motion.div>
             </div>

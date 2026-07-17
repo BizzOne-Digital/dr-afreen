@@ -38,13 +38,20 @@ const cards = [
 
 export default function WelcomeSection() {
   return (
-    <section className="section-padding" style={{ background: "#FFF8EF" }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      className="section-padding relative overflow-hidden"
+      style={{ background: "linear-gradient(160deg, #4B1025 0%, #6B1835 45%, #7A1F3D 100%)" }}
+    >
+      <div className="absolute top-8 right-8 text-5xl opacity-15 pointer-events-none select-none" style={{ color: "#F7A8C4" }}>✿</div>
+      <div className="absolute bottom-12 left-6 text-3xl opacity-10 pointer-events-none select-none" style={{ color: "#F6C85F" }}>✦</div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="mb-16">
           <SectionHeading
             label="Welcome"
             title="Welcome to Moon Homeopathy"
             subtitle="Moon Homeopathy offers warm, personalized homeopathic support for women, children, and families with a gentle and caring approach."
+            light
           />
         </div>
 
@@ -54,33 +61,34 @@ export default function WelcomeSection() {
             return (
               <ScrollReveal key={card.title} delay={i * 0.1} className="h-full">
                 <motion.div
-                  whileHover={{ y: -6, boxShadow: "0 16px 40px rgba(122,31,61,0.12)" }}
+                  whileHover={{ y: -6, boxShadow: "0 16px 40px rgba(0,0,0,0.25)" }}
                   transition={{ duration: 0.3 }}
                   className="p-7 rounded-3xl h-full flex flex-col"
                   style={{
-                    background: card.bg,
-                    border: "1px solid rgba(247,168,196,0.2)",
-                    boxShadow: "0 4px 20px rgba(122,31,61,0.06)",
+                    background: "rgba(255,252,248,0.1)",
+                    border: "1px solid rgba(247,168,196,0.25)",
+                    boxShadow: "0 4px 20px rgba(0,0,0,0.15)",
+                    backdropFilter: "blur(8px)",
                   }}
                 >
                   <div
                     className="w-11 h-11 rounded-2xl flex items-center justify-center mb-5 shrink-0"
                     style={{
-                      background: `${card.color}20`,
-                      border: `1px solid ${card.color}40`,
+                      background: "rgba(246,200,95,0.15)",
+                      border: "1px solid rgba(246,200,95,0.35)",
                     }}
                   >
-                    <Icon className="w-5 h-5" style={{ color: card.color }} />
+                    <Icon className="w-5 h-5" style={{ color: "#F6C85F" }} />
                   </div>
                   <h3
-                    className="text-lg font-medium mb-3 leading-snug"
-                    style={{ fontFamily: "Cormorant Garamond, Georgia, serif", color: "#7A1F3D" }}
+                    className="text-xl font-semibold mb-3 leading-snug"
+                    style={{ fontFamily: "Cormorant Garamond, Georgia, serif", color: "#FFFCF8" }}
                   >
                     {card.title}
                   </h3>
                   <p
                     className="text-sm leading-relaxed flex-1"
-                    style={{ color: "#8A6070", fontFamily: "Nunito Sans, sans-serif" }}
+                    style={{ color: "rgba(255,240,245,0.8)", fontFamily: "Nunito Sans, sans-serif" }}
                   >
                     {card.description}
                   </p>

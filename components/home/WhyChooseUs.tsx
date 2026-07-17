@@ -42,7 +42,7 @@ export default function WhyChooseUs() {
   return (
     <section
       className="section-padding relative overflow-hidden"
-      style={{ background: "linear-gradient(135deg, #4B1025 0%, #7A1F3D 100%)" }}
+      style={{ background: "linear-gradient(160deg, #4B1025 0%, #6B1835 40%, #7A1F3D 100%)" }}
     >
       {/* Decorative elements */}
       <motion.div

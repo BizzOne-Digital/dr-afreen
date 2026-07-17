@@ -17,6 +17,7 @@ interface PageHeroProps {
   title: React.ReactNode;
   subtitle: string;
   description?: string;
+  credentials?: string;
   backgroundImage?: string;
   imagePosition?: string;
   primaryCta: CtaLink;
@@ -29,6 +30,7 @@ export default function PageHero({
   title,
   subtitle,
   description,
+  credentials,
   backgroundImage = "/moon-glow.png",
   imagePosition = "center center",
   primaryCta,
@@ -90,11 +92,20 @@ export default function PageHero({
           </div>
 
           <h1
-            className="text-4xl sm:text-5xl md:text-6xl font-light leading-[1.1] mb-6"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.1] mb-5"
             style={{ fontFamily: "Cormorant Garamond, Georgia, serif", color: "#FFFCF8" }}
           >
             {title}
           </h1>
+
+          {credentials && (
+            <p
+              className="text-sm sm:text-base font-semibold leading-snug mb-4 max-w-xl"
+              style={{ color: "#F6C85F", fontFamily: "Nunito Sans, sans-serif" }}
+            >
+              {credentials}
+            </p>
+          )}
 
           <p
             className="text-base sm:text-lg leading-relaxed mb-4 max-w-xl"

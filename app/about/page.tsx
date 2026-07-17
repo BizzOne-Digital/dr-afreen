@@ -5,6 +5,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import PageTransition from "@/components/layout/PageTransition";
 import PageHero from "@/components/ui/PageHero";
+import CertificatesSection from "@/components/home/CertificatesSection";
 
 export const metadata: Metadata = {
   title: "About Dr. Afreen | Moon Homeopathy Toronto",
@@ -12,6 +13,9 @@ export const metadata: Metadata = {
 };
 
 const WHATSAPP_URL = "https://wa.me/16477819461?text=Hi%20Dr.%20Afreen%2C%20I%27d%20like%20to%20start%20a%20wellness%20conversation.";
+
+const CREDENTIALS =
+  "by Dr. Afreen Saeed D.H.M.S (Registered in Canada and membership with Ontario Homeopathic Medical Association)";
 
 const philosophyCards = [
   { icon: Heart, title: "Listen First", description: "Every consultation begins with attentive listening to understand your unique concerns, history, and wellness goals." },
@@ -35,6 +39,7 @@ export default function AboutPage() {
           label="Our Story"
           badge="MOON HOMEOPATHY | GENTLE WELLNESS FOR WOMEN & FAMILIES"
           title={<>About Moon<br className="hidden sm:block" /> Homeopathy</>}
+          credentials={CREDENTIALS}
           subtitle="Gentle care, thoughtful guidance, and personalized support for women, children, and families."
           description="Dr. Afreen offers warm, individualized homeopathic consultations rooted in compassion and natural wellness."
           backgroundImage="/moon-glow.png"
@@ -45,6 +50,7 @@ export default function AboutPage() {
           }}
           secondaryCta={{ label: "Explore Services", href: "/services" }}
         />
+
         {/* About Dr. Afreen */}
         <section className="section-padding" style={{ background: "#FFF8EF" }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -73,18 +79,18 @@ export default function AboutPage() {
                 <div>
                   <div className="flex items-center gap-3 mb-4">
                     <span className="w-8 h-px" style={{ background: "#F6C85F" }} />
-                    <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: "#F6C85F", fontFamily: "Nunito Sans, sans-serif" }}>Dr. Afreen</span>
+                    <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: "#F6C85F", fontFamily: "Nunito Sans, sans-serif" }}>Dr. Afreen Saeed D.H.M.S</span>
                   </div>
-                  <h2 className="text-4xl md:text-5xl font-light leading-tight mb-6" style={{ fontFamily: "Cormorant Garamond, Georgia, serif", color: "#7A1F3D" }}>
+                  <h2 className="text-4xl md:text-5xl font-semibold leading-tight mb-4" style={{ fontFamily: "Cormorant Garamond, Georgia, serif", color: "#4B1025" }}>
                     Gentle Care,<br /><span className="italic">Personal Attention</span>
                   </h2>
-                  <p className="text-base leading-relaxed mb-4" style={{ color: "#6B4755", fontFamily: "Nunito Sans, sans-serif" }}>
+                  <p className="text-base leading-relaxed mb-4" style={{ color: "#3D2830", fontFamily: "Nunito Sans, sans-serif" }}>
                     Dr. Afreen is dedicated to providing approachable homeopathic support with a focus on women&apos;s and children&apos;s wellness. Her practice is built on the belief that every person deserves individualized, compassionate care.
                   </p>
-                  <p className="text-base leading-relaxed mb-4" style={{ color: "#8A6070", fontFamily: "Nunito Sans, sans-serif" }}>
+                  <p className="text-base leading-relaxed mb-4" style={{ color: "#6B4755", fontFamily: "Nunito Sans, sans-serif" }}>
                     Through personalized consultations and thoughtful guidance, Dr. Afreen works alongside her clients to explore gentle, natural wellness approaches that honor the body&apos;s innate healing processes.
                   </p>
-                  <p className="text-base leading-relaxed mb-8" style={{ color: "#8A6070", fontFamily: "Nunito Sans, sans-serif" }}>
+                  <p className="text-base leading-relaxed mb-8" style={{ color: "#6B4755", fontFamily: "Nunito Sans, sans-serif" }}>
                     Based in Toronto, Dr. Afreen is especially passionate about supporting mothers, children, and women through the various stages and challenges of everyday wellness.
                   </p>
                   <a
@@ -103,23 +109,41 @@ export default function AboutPage() {
           </div>
         </section>
 
+        {/* Certificates */}
+        <CertificatesSection />
+
         {/* Care Philosophy */}
-        <section className="section-padding" style={{ background: "linear-gradient(180deg, #FFE8F0 0%, #FFF8EF 100%)" }}>
+        <section
+          className="section-padding"
+          style={{ background: "linear-gradient(160deg, #4B1025 0%, #6B1835 40%, #7A1F3D 100%)" }}
+        >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-16">
-              <SectionHeading label="Our Philosophy" title="The Care Philosophy" subtitle="Four principles that guide every consultation and interaction at Moon Homeopathy." />
+              <SectionHeading
+                label="Our Philosophy"
+                title="The Care Philosophy"
+                subtitle="Four principles that guide every consultation and interaction at Moon Homeopathy."
+                light
+              />
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {philosophyCards.map((card, i) => {
                 const Icon = card.icon;
                 return (
                   <ScrollReveal key={card.title} delay={i * 0.1}>
-                    <div className="p-6 rounded-3xl text-center h-full" style={{ background: "#FFFCF8", border: "1px solid rgba(247,168,196,0.2)", boxShadow: "0 4px 20px rgba(122,31,61,0.06)" }}>
-                      <div className="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-4" style={{ background: "rgba(247,168,196,0.15)" }}>
-                        <Icon className="w-6 h-6" style={{ color: "#7A1F3D" }} />
+                    <div
+                      className="p-6 rounded-3xl text-center h-full"
+                      style={{
+                        background: "rgba(255,252,248,0.1)",
+                        border: "1px solid rgba(247,168,196,0.25)",
+                        boxShadow: "0 4px 20px rgba(0,0,0,0.15)",
+                      }}
+                    >
+                      <div className="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-4" style={{ background: "rgba(246,200,95,0.15)" }}>
+                        <Icon className="w-6 h-6" style={{ color: "#F6C85F" }} />
                       </div>
-                      <h3 className="text-xl font-medium mb-3" style={{ fontFamily: "Cormorant Garamond, Georgia, serif", color: "#7A1F3D" }}>{card.title}</h3>
-                      <p className="text-sm leading-relaxed" style={{ color: "#8A6070", fontFamily: "Nunito Sans, sans-serif" }}>{card.description}</p>
+                      <h3 className="text-xl font-semibold mb-3" style={{ fontFamily: "Cormorant Garamond, Georgia, serif", color: "#FFFCF8" }}>{card.title}</h3>
+                      <p className="text-sm leading-relaxed" style={{ color: "rgba(255,240,245,0.8)", fontFamily: "Nunito Sans, sans-serif" }}>{card.description}</p>
                     </div>
                   </ScrollReveal>
                 );
@@ -143,8 +167,8 @@ export default function AboutPage() {
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style={{ background: "rgba(122,31,61,0.1)" }}>
                         <Icon className="w-5 h-5" style={{ color: "#7A1F3D" }} />
                       </div>
-                      <h3 className="text-xl font-medium mb-2" style={{ fontFamily: "Cormorant Garamond, Georgia, serif", color: "#7A1F3D" }}>{item.label}</h3>
-                      <p className="text-sm leading-relaxed" style={{ color: "#8A6070", fontFamily: "Nunito Sans, sans-serif" }}>{item.description}</p>
+                      <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: "Cormorant Garamond, Georgia, serif", color: "#4B1025" }}>{item.label}</h3>
+                      <p className="text-sm leading-relaxed" style={{ color: "#6B4755", fontFamily: "Nunito Sans, sans-serif" }}>{item.description}</p>
                     </div>
                   </ScrollReveal>
                 );
@@ -154,10 +178,10 @@ export default function AboutPage() {
         </section>
 
         {/* Final CTA */}
-        <section className="section-padding" style={{ background: "linear-gradient(135deg, #4B1025, #7A1F3D)" }}>
+        <section className="section-padding" style={{ background: "linear-gradient(160deg, #4B1025 0%, #6B1835 40%, #7A1F3D 100%)" }}>
           <div className="max-w-3xl mx-auto px-4 text-center">
             <ScrollReveal>
-              <h2 className="text-4xl font-light mb-4" style={{ fontFamily: "Cormorant Garamond, Georgia, serif", color: "#FFFCF8" }}>
+              <h2 className="text-4xl font-semibold mb-4" style={{ fontFamily: "Cormorant Garamond, Georgia, serif", color: "#FFFCF8" }}>
                 Start your wellness conversation
               </h2>
               <p className="text-base mb-8" style={{ color: "rgba(255,240,245,0.8)", fontFamily: "Nunito Sans, sans-serif" }}>

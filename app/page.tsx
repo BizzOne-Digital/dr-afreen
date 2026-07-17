@@ -1,6 +1,7 @@
 import IntroWrapper from "@/components/ui/IntroWrapper";
 import HeroSection from "@/components/home/HeroSection";
 import WelcomeSection from "@/components/home/WelcomeSection";
+import CertificatesSection from "@/components/home/CertificatesSection";
 import ServicesPreview from "@/components/home/ServicesPreview";
 import AboutPreview from "@/components/home/AboutPreview";
 import ProductPreview from "@/components/home/ProductPreview";
@@ -12,6 +13,7 @@ export default function HomePage() {
     <IntroWrapper>
       <HeroSection />
       <WelcomeSection />
+      <CertificatesSection />
       <ServicesPreview />
       <AboutPreview />
       <ProductPreview />

@@ -38,10 +38,10 @@ export default function SectionHeading({
         </div>
       )}
       <h2
-        className="text-4xl md:text-5xl font-light leading-tight"
+        className="text-4xl md:text-5xl font-semibold leading-tight"
         style={{
           fontFamily: "Cormorant Garamond, Georgia, serif",
-          color: light ? "#FFFCF8" : "#7A1F3D",
+          color: light ? "#FFFCF8" : "#4B1025",
         }}
       >
         {title}

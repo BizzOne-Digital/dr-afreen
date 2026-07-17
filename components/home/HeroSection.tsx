@@ -16,6 +16,9 @@ import FloatingParticles from "@/components/ui/FloatingParticles";
 
 const WHATSAPP_URL = "https://wa.me/16477819461?text=Hi%20Dr.%20Afreen%2C%20I%27d%20like%20to%20book%20a%20consultation.";
 
+const CREDENTIALS =
+  "by Dr. Afreen Saeed D.H.M.S (Registered in Canada and membership with Ontario Homeopathic Medical Association)";
+
 const featureCards = [
   {
     title: "Women's Wellness",
@@ -77,7 +80,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 2.8 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-4"
               style={{
                 background: "rgba(255, 252, 248, 0.7)",
                 border: "1px solid rgba(247, 168, 196, 0.45)",
@@ -87,9 +90,9 @@ export default function HeroSection() {
               <Heart className="w-3.5 h-3.5 fill-gold/30" style={{ color: "#F6C85F" }} />
               <span
                 className="text-xs font-semibold tracking-wide"
-                style={{ color: "#7A1F3D", fontFamily: "Nunito Sans, sans-serif" }}
+                style={{ color: "#4B1025", fontFamily: "Nunito Sans, sans-serif" }}
               >
-                Trusted Care. Naturally.
+                Welcome · Trusted Care. Naturally.
               </span>
             </motion.div>
 
@@ -97,46 +100,44 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 2.9 }}
-              className="text-3xl sm:text-5xl lg:text-[3.25rem] font-light leading-[1.15] mb-4"
-              style={{ fontFamily: "Cormorant Garamond, Georgia, serif", color: "#3D2830" }}
+              className="text-4xl sm:text-5xl lg:text-6xl xl:text-[3.75rem] font-semibold leading-[1.12] mb-3"
+              style={{ fontFamily: "Cormorant Garamond, Georgia, serif", color: "#4B1025" }}
             >
               Gentle Homeopathic
               <br />
               Care for{" "}
               <span
-                className="italic font-normal"
+                className="italic font-semibold"
                 style={{
-                  fontSize: "1.15em",
-                  background: "linear-gradient(135deg, #7A1F3D 0%, #C45B82 50%, #F7A8C4 100%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
+                  fontSize: "1.08em",
+                  color: "#7A1F3D",
                 }}
               >
                 Women & Children
               </span>
             </motion.h1>
 
+            <motion.p
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 3.0 }}
+              className="text-sm sm:text-base font-semibold leading-snug mb-4 max-w-lg"
+              style={{ color: "#4B1025", fontFamily: "Nunito Sans, sans-serif" }}
+            >
+              {CREDENTIALS}
+            </motion.p>
+
             {/* Gold separator */}
             <motion.div
               initial={{ opacity: 0, scaleX: 0 }}
               animate={{ opacity: 1, scaleX: 1 }}
-              transition={{ duration: 0.6, delay: 3.0 }}
+              transition={{ duration: 0.6, delay: 3.05 }}
               className="flex items-center gap-3 mb-5 max-w-xs"
             >
               <div className="flex-1 h-px" style={{ background: "linear-gradient(90deg, transparent, #F6C85F)" }} />
               <Leaf className="w-3.5 h-3.5" style={{ color: "#F6C85F" }} />
               <div className="flex-1 h-px" style={{ background: "linear-gradient(90deg, #F6C85F, transparent)" }} />
             </motion.div>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 3.1 }}
-              className="text-base sm:text-lg leading-relaxed mb-8 max-w-md"
-              style={{ color: "#6B5560", fontFamily: "Nunito Sans, sans-serif" }}
-            >
-              Personalized, holistic support for every stage of life. Empowering wellness for women and joyful health for children—naturally.
-            </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
